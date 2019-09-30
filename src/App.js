@@ -8,7 +8,7 @@ function App() {
     let timeStamp = new Date().setFullYear(new Date().getFullYear(), 0, 1);
     console.log(timeStamp);
     let yearFirstDay = Math.floor(timeStamp / 86400000);
-    let today = Math.ceil((new Date().getTime() + 600 * 60 * 1000) / 86400000);
+    let today = Math.ceil(new Date().getTime() / 86400000);
     let year = new Date().getFullYear().toString().slice(2, 4);
     console.log(year);
   
