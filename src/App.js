@@ -3,22 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  function getJulianDate() {
+    let timeStamp = new Date().setFullYear(new Date().getFullYear(), 0, 1);
+    console.log(timeStamp);
+    let yearFirstDay = Math.floor(timeStamp / 86400000);
+    let today = Math.ceil((new Date().getTime() + 600 * 60 * 1000) / 86400000);
+    let year = new Date().getFullYear().toString().slice(2, 4);
+    console.log(year);
+  
+    return year + (today - yearFirstDay);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="data"> {getJulianDate()}</div>
     </div>
   );
 }
