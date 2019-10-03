@@ -12,8 +12,8 @@ function App() {
     let year = new Date().getFullYear().toString().slice(2, 4);
     console.log(year);
   
-    //return year + (today - yearFirstDay);
-    return new Date().getTimezoneOffset();
+    return year + (today - yearFirstDay);
+    //return new Date().getTimezoneOffset();
 
   }
   return (
